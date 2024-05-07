@@ -1,0 +1,71 @@
+<br><br><br>
+<div class="cabecera">
+  <img style="width: 60%; height: 500px; padding-left: 1000px;" src="assets/img/Calendario.png" alt="...">
+</div>
+<br><br><br><br><br>
+<div><ul>    @if(citas.length >0) {
+  
+  <button style="width: 100%;" (click)="mostrarFuturas = !mostrarFuturas">
+    {{ mostrarFuturas ? 'Mostrar Fechas Pasadas' : 'Mostrar Fechas Futuras' }}
+  </button>
+  <br><br>
+      
+        @if(mostrarFuturas) {
+          <li>
+            <p>Fechas Futuras</p>
+        @for (cita of citasFuturas; track cita) {
+        <strong>Nombre:</strong> {{ cita.nombre }}<br>
+        <strong>Número:</strong> {{ cita.numero }}<br>
+        <strong>Correo:</strong> {{ cita.correo }}<br>
+        <strong>Fecha:</strong> {{ cita.fecha }}<br>
+        <strong>Hora:</strong> {{ cita.hora }}<br><br>
+        
+        }
+      </li>}@else{
+        <li>
+          <p>Fechas Pasadas</p>
+          @for (cita of citasPasadas; track cita) {
+            
+            <strong>Nombre:</strong> {{ cita.nombre }}<br>
+            <strong>Número:</strong> {{ cita.numero }}<br>
+            <strong>Correo:</strong> {{ cita.correo }}<br>
+            <strong>Fecha:</strong> {{ cita.fecha }}<br>
+            <strong>Hora:</strong> {{ cita.hora }}<br><br>
+
+        }</li>
+      }
+    }@else{
+      <p>No hay citas guardadas.</p>}
+    </ul>
+  
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="../assets/img/Logo-sin-fondo.png" alt="DreamStay" style="height: 200px; width: 200px;">
+          <div class="footer-lema">
+              <p>"Conéctate con el mundo, encuentra tu hogar en cualquier parte."</p>
+          </div>
+      </div>
+      <div class="footer-contacto">
+          <h3 class="titulo-footer">Contacto</h3>
+          <p>Teléfono: 449-910-74-00 EXT. 10014</p>
+          <p>Dirección: Av. Universidad 940, Ciudad Universitaria, Universidad Autónoma de Aguascalientes, 20110 Aguascalientes.</p>
+      </div>
+      <div class="footer-nosotros">
+          <h3 class="titulo-footer">Nosotros</h3>
+          <p>"Somos anfitriones de Airbnb dedicados a ofrecerte experiencias únicas en alojamientos de calidad. Desde acogedoras cabañas hasta lujosas villas, estamos aquí para que disfrutes de cada estadía al máximo." </p>
+      </div>
+      <div class="footer-siguenos">
+          <h3 class="titulo-footer-siguenos">Síguenos</h3>
+          <!-- Agrega aquí los íconos de las redes sociales -->
+          <div class="redes-sociales">
+              <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #000000;"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl" style="color: #000000;"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram fa-xl" style="color: #000000;"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok fa-xl" style="color: #000000;"></i></a>
+          </div>
+      </div>
+  </div>
+</footer> 

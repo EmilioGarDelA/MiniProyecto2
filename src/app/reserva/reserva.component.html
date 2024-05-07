@@ -1,0 +1,57 @@
+<div class="cabecera">
+  <img style="width: 90%; height: 900px; padding-left: 200px;" src="assets/img/Citas.png" alt="...">
+</div>
+<br><br><hr><br><br><br><br><br><br>
+<div class="formularioCita">
+<div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" #nombreInput required>
+  </div>
+  <div>
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" #numeroInput required>
+  </div>
+  <div>
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" #correoInput required>
+  </div>
+  <div>
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" #fechaInput required>
+  </div>
+  <div>
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" #horaInput required>
+  </div>
+  <button (click)="registrarReserva(nombreInput.value, numeroInput.value, correoInput.value, fechaInput.value, horaInput.value)">Registrar Reserva</button>
+</div>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/Logo-sin-fondo.png" alt="DreamStay" style="height: 200px; width: 200px;">
+            <div class="footer-lema">
+                <p>"Conéctate con el mundo, encuentra tu hogar en cualquier parte."</p>
+            </div>
+        </div>
+        <div class="footer-contacto">
+            <h3 class="titulo-footer">Contacto</h3>
+            <p>Teléfono: 449-910-74-00 EXT. 10014</p>
+            <p>Dirección: Av. Universidad 940, Ciudad Universitaria, Universidad Autónoma de Aguascalientes, 20110 Aguascalientes.</p>
+        </div>
+        <div class="footer-nosotros">
+            <h3 class="titulo-footer">Nosotros</h3>
+            <p>"Somos anfitriones de Airbnb dedicados a ofrecerte experiencias únicas en alojamientos de calidad. Desde acogedoras cabañas hasta lujosas villas, estamos aquí para que disfrutes de cada estadía al máximo." </p>
+        </div>
+        <div class="footer-siguenos">
+            <h3 class="titulo-footer-siguenos">Síguenos</h3>
+            <!-- Agrega aquí los íconos de las redes sociales -->
+            <div class="redes-sociales">
+                <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok fa-xl" style="color: #000000;"></i></a>
+            </div>
+        </div>
+    </div>
+</footer> 

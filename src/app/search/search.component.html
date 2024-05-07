@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8e2afe6ad.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+<section class="listings">
+            
+    <div class="listing-grid">
+        @for (listing of res; track listing){
+      <div class="listing-row">
+        
+        <div class="listing-card">
+          <img [src]="listing.imgSrc" [alt]="listing.titulo">
+          <h3 class="p-titulo">{{ listing.titulo }}</h3>
+          <p class="p-pais">{{ listing.pais }}</p>
+          <p class="p-fechas">{{ listing.fechas }}</p>
+          <p class="p-precio">{{ listing.precio }}</p>
+          <a class="btn" [routerLink]="['/reserva']" style="letter-spacing: 6px;">¡RESERVA YA!</a>
+        </div>
+    
+      </div>}
+    
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/Logo-sin-fondo.png" alt="DreamStay" style="height: 200px; width: 200px;">
+            <div class="footer-lema">
+                <p>"Conéctate con el mundo, encuentra tu hogar en cualquier parte."</p>
+            </div>
+        </div>
+        <div class="footer-contacto">
+            <h3 class="titulo-footer">Contacto</h3>
+            <p>Teléfono: 449-910-74-00 EXT. 10014</p>
+            <p>Dirección: Av. Universidad 940, Ciudad Universitaria, Universidad Autónoma de Aguascalientes, 20110 Aguascalientes.</p>
+        </div>
+        <div class="footer-nosotros">
+            <h3 class="titulo-footer">Nosotros</h3>
+            <p>"Somos anfitriones de Airbnb dedicados a ofrecerte experiencias únicas en alojamientos de calidad. Desde acogedoras cabañas hasta lujosas villas, estamos aquí para que disfrutes de cada estadía al máximo." </p>
+        </div>
+        <div class="footer-siguenos">
+            <h3 class="titulo-footer-siguenos">Síguenos</h3>
+            <!-- Agrega aquí los íconos de las redes sociales -->
+            <div class="redes-sociales">
+                <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram fa-xl" style="color: #000000;"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok fa-xl" style="color: #000000;"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
